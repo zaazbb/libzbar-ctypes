@@ -20,7 +20,7 @@ Usage
     
     - install libzbar_ctypes::
 
-        hg clone https://bitbucket.org/zaazbb/libzbar_ctypes
+        git clone https://github.com/zaazbb/libzbar_ctypes
         cd libzbar_ctypes
         sudo python3 setup.py install  
 
