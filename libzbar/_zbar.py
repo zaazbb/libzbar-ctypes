@@ -1,6 +1,6 @@
 # by jf
 # zaazbb <zaazbb@163.com>
-# https://bitbucket.org/zaazbb/zbar_ctypes
+# https://github.com/zaazbb/zbar_ctypes
 
 from ctypes import *
 
@@ -28,6 +28,13 @@ zbar_get_symbol_name = _libzbar.zbar_get_symbol_name
 zbar_get_symbol_name.restype = c_char_p
 zbar_get_symbol_name.argtypes = [c_int]
 
+#symbolset
+class zbar_symbol_set(Structure):
+    _fields_ = []
+
+zbar_symbol_set_get_size = _libzbar.zbar_symbol_set_get_size
+zbar_symbol_set_get_size.restype = c_int
+zbar_symbol_set_get_size.argtype = [POINTER(zbar_symbol_set)]
 
 # image.
     
@@ -67,6 +74,10 @@ zbar_image_set_data.argtypes = [POINTER(zbar_image),
 zbar_image_first_symbol = _libzbar.zbar_image_first_symbol
 zbar_image_first_symbol.restype = POINTER(zbar_symbol)
 zbar_image_first_symbol.argtypes = [POINTER(zbar_image)]
+
+zbar_image_get_symbols = _libzbar.zbar_image_get_symbols
+zbar_image_get_symbols.restype = POINTER(zbar_symbol_set)
+zbar_image_get_symbols.argtypes =[POINTER(zbar_image)]
 
 
 # image scanner.

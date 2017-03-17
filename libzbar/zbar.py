@@ -39,7 +39,16 @@ class Symbol:
     type = property(_get_type)
     name = property(_get_name)
     
+class SymbolSet:
+    def __init__(self, symbolset):
+        self._symbolset = symbolset
+        self._size = 0
 
+    def _get_size(self):
+        self._size = zbar_symbol_set_get_size(self._symbolset)
+        return self._size 
+
+    size = property(_get_size)
 
 # image formats.
 # 'GREY', 'Y800', 'Y8  ', 'Y8\x00\x00'
@@ -88,7 +97,8 @@ class Image:
     def next(self):
         return self.__next__()
         
-
+    def get_symbols(self):
+        return SymbolSet(zbar_image_get_symbols(self._image))
     
 class ImageScanner:
     def __init__(self):
