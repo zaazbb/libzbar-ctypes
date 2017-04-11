@@ -16,7 +16,7 @@ Usage
 - Install (on raspberry pi)  
     - install libzbar::
     
-        audo apt-get install libzbar0  
+        sudo apt-get install libzbar0  
     
     - install libzbar_ctypes::
 
