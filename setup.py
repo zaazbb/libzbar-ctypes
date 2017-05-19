@@ -28,7 +28,7 @@ setup(
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/zaazbb/libzbar_ctypes',
+    url='https://github.com/zaazbb/libzbar-ctypes',
 
     # Author details
     author='zaazbb',

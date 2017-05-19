@@ -20,10 +20,10 @@ Usage
     
     - install libzbar_ctypes
         - python3::
-          pip install libzbar_ctypes
+          pip install libzbar-ctypes
 
         - python2::
-          pip3 install libzbar_ctypes
+          pip3 install libzbar-ctypes
 
 - Example (on raspberry pi)  
     - install pillow  
