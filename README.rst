@@ -13,16 +13,17 @@ It only test under Raspbian (raspberry pi) now.
 Usage
 -----
 
-- Install (on raspberry pi)  
+- Install
     - install libzbar::
     
-        sudo apt-get install libzbar0  
+        sudo apt-get install zbar-tools
     
-    - install libzbar_ctypes::
+    - install libzbar_ctypes
+        - python3::
+          pip install libzbar_ctypes
 
-        git clone https://github.com/zaazbb/libzbar_ctypes
-        cd libzbar_ctypes
-        sudo python3 setup.py install  
+        - python2::
+          pip3 install libzbar_ctypes
 
 - Example (on raspberry pi)  
     - install pillow  
@@ -30,6 +31,12 @@ Usage
         download pillow source code (http://python-pillow.github.io/), and compile it.  
     
     - run the example script.
+
+- test
+    - test under ubuntu 15.04.
+    - test on hardware firefly.
+    - test on hardware rasyberry pi.
+
   
 todo
 ----
