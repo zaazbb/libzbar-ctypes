@@ -1,4 +1,4 @@
-zbar_ctypes
+libzbar-ctypes
 ===========
 
 This is libzbar python ctypes bindings, it should support python2 and python3.
